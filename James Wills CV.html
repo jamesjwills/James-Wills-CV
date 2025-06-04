@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>James Wills</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="20604c8d-18d8-8065-a015-d8c05acc465e" class="page sans"><header><h1 class="page-title">James Wills</h1><p class="page-description"></p></header><div class="page-body"><table id="20804c8d-18d8-8016-8f95-d370f6ad82e6" class="simple-table"><tbody><tr id="20804c8d-18d8-808a-8e80-d6132e74d23c"><td id="Sa~~" class="" style="width:230.0037841796875px"><a href="http://linkedin.com/in/jamesjwills">LinkedIn</a></td><td id="VVU[" class="" style="width:230.0037841796875px"><a href="http://jameswills.org">Website</a></td><td id="^amn" class="" style="width:230.0037841796875px"><a href="http://github.com/jamesjwills">GitHub</a> </td></tr></tbody></table><h2 id="20704c8d-18d8-8009-a5fa-d11bec287ef2" class="">Work Experience </h2><table id="20804c8d-18d8-808a-b746-d0fc97290a6c" class="simple-table"><tbody><tr id="20804c8d-18d8-801e-bae8-c2fb82550c62"><td id="Sa~~" class="" style="width:230.0037841796875px"><strong>Software Developer</strong></td><td id="VVU[" class="" style="width:230.0037841796875px">Policy Monitor Ltd</td><td id="^amn" class="" style="width:230.0037841796875px">2024 - present</td></tr></tbody></table><h3 id="20604c8d-18d8-80b9-ab51-cec2d097c046" class="">CSPM - Cyber Security Product development</h3><p id="20704c8d-18d8-8089-ae0d-cf6c5cbe1a2e" class="">Tech stack: Angular, Java, SQL, MariaDB, LDAP, Apache Tomcat, Maven, AWS Cloud Services, Figma for UX.</p><ul id="20704c8d-18d8-800d-babe-c53a8044db30" class="bulleted-list"><li style="list-style-type:disc">Product development work encompassing a full-stack product and customer management in the cyber security space.</li></ul><h3 id="20604c8d-18d8-805b-bb38-f1f9ac689493" class="">Diegesis Hub - Timesheet and Invoicing Platform development</h3><p id="20704c8d-18d8-8087-882a-ce19cbd592b8" class="">Tech stack: Angular, Java, SQL, UX Design, Data Analytics, AWS Cloud Services, Figma for UX.</p><ul id="20704c8d-18d8-8043-a155-e4998b8ba646" class="bulleted-list"><li style="list-style-type:disc">Refactored the data architecture to enable persistent storage and historical insights.</li></ul><ul id="20704c8d-18d8-809e-8849-c54e18c02248" class="bulleted-list"><li style="list-style-type:disc">Improved database performance by 10x through query optimisation.</li></ul><ul id="20704c8d-18d8-8070-ae9c-c4c175fc5cca" class="bulleted-list"><li style="list-style-type:disc">Designed UX-driven features for project managers.</li></ul><ul id="20704c8d-18d8-80bb-810a-f103bd3e2226" class="bulleted-list"><li style="list-style-type:disc">Automated monthly analytics reporting, saving time for PMs and senior leadership.</li></ul><ul id="20704c8d-18d8-8052-9875-fa0b196b91da" class="bulleted-list"><li style="list-style-type:disc">Delivered accurate monthly invoices and timesheets across teams.</li></ul><ul id="20704c8d-18d8-8007-bfc2-fccc4db55110" class="bulleted-list"><li style="list-style-type:disc">Rewrote user documentation to support wider adoption and future development.</li></ul><h3 id="20704c8d-18d8-8088-9fa5-f1dba49fd0a4" class="">GenAI Code Conversion Tool</h3><p id="20704c8d-18d8-801b-96cd-ec3625ab31ba" class="">Tech stack: OpenROAD 4GL, C#, HuggingFace, Python, InstructLAB.</p><ul id="20704c8d-18d8-80a0-840a-d059dacd6747" class="bulleted-list"><li style="list-style-type:disc">Contributed to a generative AI code conversion tool to translate OpenROAD 4GL to C#.</li></ul><h3 id="20704c8d-18d8-80a7-9fef-d667775f93ae" class="">AI Document Assembly Tool</h3><p id="20704c8d-18d8-808f-b9b2-cc9e33558407" class="">Tech stack: Angular, TypeChat, LMStudio, Python.</p><ul id="20704c8d-18d8-80a8-8ba7-d3b363901ff9" class="bulleted-list"><li style="list-style-type:disc">Developed a document summarisation app incorporating Microsoft&#x27;s TypeChat NLP framework with an Angular frontend and Python backend.</li></ul><h3 id="20704c8d-18d8-8093-924a-dc84557e60c0" class="">Infrascale Integration</h3><p id="20704c8d-18d8-806c-ba97-d3bd2d80c23e" class="">Tech stack: Java, Camel DSL, SOAP APIs.</p><ul id="20704c8d-18d8-8059-8097-ec0760a196f0" class="bulleted-list"><li style="list-style-type:disc">Developed a Java based integration interface with Infrascale backup services, including error handling, validation design and secure API standards.</li></ul><h3 id="20704c8d-18d8-80f7-bd7b-c95b7ea747f6" class="">2iC - Device Communication in Low Latency Networks</h3><p id="20704c8d-18d8-80c1-81d3-cf49c80bfe3c" class="">Tech stack:  Java, Networking, Node-RED, Lean Service Architecture.</p><ul id="20704c8d-18d8-802c-ab03-db2a7498ca3f" class="bulleted-list"><li style="list-style-type:disc">Developed service board functionality to fetch remote platforms for their “Mission Control” product.</li></ul><ul id="20704c8d-18d8-8058-9ad4-e18c108e7eb9" class="bulleted-list"><li style="list-style-type:disc">Updated training documentation to reflect updates in product development.</li></ul><h3 id="20704c8d-18d8-809d-a3f1-ce7654698c2e" class="">Training</h3><ul id="20704c8d-18d8-800c-98f8-ec34b778edb7" class="bulleted-list"><li style="list-style-type:disc">Diegesis training in Ingres, DBA, SQL, ABF and OpenROAD 4GL.</li></ul><ul id="20704c8d-18d8-80e9-b63a-d4cd7aaf9fc7" class="bulleted-list"><li style="list-style-type:disc">Member of company Special Interest Group training in UX/UI.</li></ul><hr id="20604c8d-18d8-80c4-8bc2-f0bc4b9b08e8"/><h2 id="20704c8d-18d8-8029-8c15-e20ca84ce0e8" class="">Skills and Certifications</h2><p id="20704c8d-18d8-80b7-be38-d13cd0281fd1" class="">Java, C#, SQL, Angular, Camel DSL, SOAP and REST APIs, Lean Service Architecture and Microservice Architecture, Generative AI (Oracle Cloud Infrastructure 2024 Generative AI Certified Professional), Cloud Technologies (AWS Solutions Architect), Quantum Computing (IBM Quantum Business Foundations).</p><hr id="20704c8d-18d8-8077-bf3d-e7340acb3c94"/><h2 id="20704c8d-18d8-8065-9efa-d44c46a0e139" class="">Previous Employment</h2><table id="20804c8d-18d8-8020-beaf-f5593e8c35bf" class="simple-table"><tbody><tr id="20804c8d-18d8-8012-9307-d62f144b5ae6"><td id="Sa~~" class="" style="width:230.0037841796875px"><strong>Lecturer in Philosophy</strong></td><td id="VVU[" class="" style="width:230.0037841796875px">Pembroke College, Oxford</td><td id="^amn" class="" style="width:230.0037841796875px">2022 - 2023</td></tr></tbody></table><p id="20704c8d-18d8-8015-985f-c9ef1e15cf53" class="">Taught advanced courses in formal philosophy (logic, metaphysics). Wrote and delivered lectures for the Advanced Philosophy of Physics course.</p><table id="20804c8d-18d8-80ee-9389-d988467d0f2f" class="simple-table"><tbody><tr id="20804c8d-18d8-8052-bf3b-d17b6a8aab7a"><td id="Sa~~" class="" style="width:230.0037841796875px"><strong>Graduate Teaching Assistant</strong></td><td id="VVU[" class="" style="width:230.0037841796875px">London School of Economics</td><td id="^amn" class="" style="width:230.0037841796875px">2017 - 2022</td></tr></tbody></table><p id="20704c8d-18d8-8076-ad8d-cb571ff5cb21" class="">Led undergraduate classes in introductory philosophy, philosophy and foundations of physics and the philosophy and foundations of finance.</p><table id="20804c8d-18d8-80be-b5b9-db7400362eaa" class="simple-table"><tbody><tr id="20804c8d-18d8-8017-bc54-cad7436b1de7"><td id="Sa~~" class="" style="width:230.0037841796875px"><strong>Teacher of Mathematics and Physics</strong></td><td id="VVU[" class="" style="width:230.0037841796875px">Bedford School</td><td id="^amn" class="" style="width:230.0037841796875px">2015 - 2017</td></tr></tbody></table><p id="20704c8d-18d8-80c5-8b3f-eebd5a9f60dd" class="">Taught classes in GCSE, IB HL and A-level Further Mathematics.</p><hr id="20804c8d-18d8-80ba-873f-c06685f37d0a"/><h2 id="20704c8d-18d8-8040-b2a4-d5a68515048b" class="">Education</h2><table id="20804c8d-18d8-80d6-a333-e7bf55edb435" class="simple-table"><tbody><tr id="20804c8d-18d8-80c1-a0df-dd63993eb876"><td id="Sa~~" class="" style="width:230.0037841796875px"><strong>Java Software Engineer</strong></td><td id="VVU[" class="" style="width:230.0037841796875px">Firebrand bootcamp</td><td id="^amn" class="" style="width:230.0037841796875px">2023 - 2024</td></tr></tbody></table><p id="20704c8d-18d8-80ad-bd80-dc5e1daf0f09" class="">Took examined courses in: Certiport IT Java Specialist, Microsoft Azure Fundamentals AZ-900, Microsoft Developer Associate AZ-204.</p><table id="20804c8d-18d8-80e0-9167-dea7ca98e291" class="simple-table"><tbody><tr id="20804c8d-18d8-80c9-ba65-ec357aa32f39"><td id="Sa~~" class="" style="width:230.0037841796875px"><strong>PhD Philosophy</strong></td><td id="VVU[" class="" style="width:230.0037841796875px">London School of Economics</td><td id="^amn" class="" style="width:230.0037841796875px">2017 - 2022</td></tr></tbody></table><p id="20704c8d-18d8-8006-ae62-ebe7891395bd" class="">Thesis: “Identity and Indistinguishability in Thermal Physics”. Published articles in leading philosophy journals. Presented my research at leading international philosophy conferences. For publications, and other writing, see my website.</p><table id="20804c8d-18d8-8077-ab24-e0980df30269" class="simple-table"><tbody><tr id="20804c8d-18d8-804f-994e-d482c543f969"><td id="Sa~~" class="" style="width:230.0037841796875px"><strong>MPhysPhil Physics and Philosophy (2.i)</strong></td><td id="VVU[" class="" style="width:230.0037841796875px">Brasenose College, Oxford</td><td id="^amn" class="" style="width:230.0037841796875px">2011 - 2015</td></tr></tbody></table><p id="20704c8d-18d8-8019-ac70-f3a91e5e3322" class="">Academic Exhibition. Led the Astronomy Society’s initiative to restore their abandoned telescope and dome.</p><hr id="20804c8d-18d8-802b-b0aa-ec8f81a8a1a6"/><h2 id="20704c8d-18d8-806b-a68c-f4795fad9518" class="">Volunteering</h2><table id="20804c8d-18d8-809c-94fd-cd0c0dc25d3c" class="simple-table"><tbody><tr id="20804c8d-18d8-807d-999c-fd7405539fc4"><td id="Sa~~" class="" style="width:230.0037841796875px"><strong>Treasurer</strong></td><td id="VVU[" class="" style="width:230.0037841796875px">The Order of Malta Volunteer</td><td id="^amn" class="" style="width:230.0037841796875px">2020 - 2024</td></tr></tbody></table><p id="20704c8d-18d8-80df-a870-cbb4e1cf0c4a" class="">Managed the charity’s activities with the Chairman, I took responsibility for the charity’s finances, budgets and annual accounts in collaboration with the Trustees.</p><table id="20804c8d-18d8-801b-9fb9-f804d35f47c4" class="simple-table"><tbody><tr id="20804c8d-18d8-8039-a316-e1060c19f347"><td id="Sa~~" class="" style="width:230.0037841796875px"><strong>Quantum Computing Course Leader</strong></td><td id="VVU[" class="" style="width:230.0037841796875px">Diegesis Ltd</td><td id="^amn" class="" style="width:230.0037841796875px">2025 - present</td></tr></tbody></table><p id="20704c8d-18d8-806a-b19a-dd45021aa646" class="">Designing and leading a course on Quantum Computing for the benefit of employees’ CPD, following IBM’s <em>Quantum Business Foundations </em>course.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
